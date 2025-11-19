@@ -41,5 +41,8 @@
     "moduleDetection": "force",
     "skipLibCheck": true,
     "outDir": "dist",
-  }
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+  },
+  "include": ["src"]
 }

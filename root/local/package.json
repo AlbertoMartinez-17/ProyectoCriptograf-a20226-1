@@ -1,19 +1,21 @@
 {
   "name": "local",
   "version": "1.0.0",
-  "description": "**Proyecto:** Cold Wallet – Criptografía y Comunicación Segura   **Versión:** 1.0.0   --- ## Descripción general",
-  "main": "index.js",
-  "directories": {
-    "test": "tests"
-  },
+  "main": "dist/server.js",
   "scripts": {
-    "start": "ts-node src/testFileManager.ts",
-   "test": "vitest run"
+    "dev": "ts-node src/server.ts",
+    "start": "ts-node src/server.ts",
+    "build": "tsc",
+    "test": "vitest run",
+    "demo": "ts-node src/testFileManager.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5"
+  },
   "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/cors": "^2.8.17",
     "@types/node": "^24.10.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3",

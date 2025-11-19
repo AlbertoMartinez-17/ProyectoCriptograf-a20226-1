@@ -2,6 +2,8 @@ import * as fs from "fs";
 import * as path from "path";
 
 const BASE_DIRS = ["inbox", "outbox", "verified"];
+const fileManager = require("./fileManager");
+
 
 function ensureDirs() {
   for (const dir of BASE_DIRS) {
