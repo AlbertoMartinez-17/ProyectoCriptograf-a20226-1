@@ -35,8 +35,6 @@ export async function signTransaction(
 
     const sig = sodium.crypto_sign_detached(msg, secretKey);
 
-    secretKey.fill(0)//zeorize the secret, ZEROIZE AGAIN IN THE PLACE WHERE THIS FUNCTION IS CALLED AND THE SECRET IS LOADED
-
     let publicKey = pubKey;
     if (!publicKey) {
         publicKey = secretKey.subarray(32, 64);

@@ -123,8 +123,8 @@ export class KeystoreFile {
             const ciphertext = Buffer.from(ksf.ciphertext_b64, 'base64');
             const tag = Buffer.from(ksf.tag_b64, 'base64');
 
-            const secretKeyBuffer = decryptAESGCM(derivedKey, nonce, ciphertext, tag);
-            derivedKey.fill(0); // Limpiar
+            const secretKeyBuffer = decryptAESGCM(derivedKey, ciphertext, nonce, tag);
+            derivedKey.fill(0); // Zeorize
 
             return {
                 secretKey: new Uint8Array(secretKeyBuffer), //THIS NEEDS TO BE ZEROIZE IN THE NEXT MODULE THAT USE IS (TRANSACTIONS?)
@@ -132,7 +132,7 @@ export class KeystoreFile {
                 address: ksf.address
             };
         } catch (e) {
-            throw new Error("Contraseña incorrecta o archivo dañado.");
+            throw new Error("Contraseña incorrecta o archivo dañado."); 
         }
     }
 }
