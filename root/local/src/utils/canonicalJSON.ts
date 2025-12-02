@@ -8,7 +8,6 @@
    * @param value - Receives any type of object that could be the JSON
    * @returns The array with the "key:val" pairs sorted
    *
-   * @beta
 */
 function normalizeValue(value: any): any {
   if (value === null) {
@@ -54,7 +53,6 @@ function normalizeValue(value: any): any {
    * @param obj - The JSON that needs to be canonical
    * @returns Tha canonical JSON in a string object.
    *
-   * @beta
    */
 export function canonicalJson(obj: any): string {
   const normalized = normalizeValue(obj);
