@@ -1,0 +1,5 @@
+coldwallet/node_modules/
+coldwallet/keystore.json
+coldwallet/inbox/
+coldwallet/outbox/
+coldwallet/verified/
