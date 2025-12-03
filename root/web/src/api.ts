@@ -73,3 +73,8 @@ export async function moveToVerified(filename: string) {
   });
   return r.json();
 }
+
+export async function getSession() {
+  const r = await fetch(`${API}/session`);
+  return r.json();
+}
