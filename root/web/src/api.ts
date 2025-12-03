@@ -21,13 +21,13 @@ export async function loadWallet(passphrase: string, directory: string) {
 }
 
 // Enviar transacción
-export async function sendTx(toAddress, amount, passphrase, receiverInboxPath) {
+export async function sendTx(toAddress: string, amount: number, passphrase: string, receiverInboxPath: string) {
   const r = await fetch(`${API}/wallet/send`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       toAddress,
-      amount,
+      amount: Number(amount),
       passphrase,
       receiverInboxPath,
     }),
@@ -47,6 +47,15 @@ export async function verifyTx(filename: string) {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ filename }),
+  });
+  return r.json();
+}
+
+export async function saveToOutbox(tx: any) {
+  const r = await fetch(`${API}/outbox`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(tx),
   });
   return r.json();
 }
