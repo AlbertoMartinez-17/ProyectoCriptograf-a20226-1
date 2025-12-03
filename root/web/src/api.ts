@@ -59,3 +59,17 @@ export async function saveToOutbox(tx: any) {
   });
   return r.json();
 }
+
+export async function getOutbox() {
+  const r = await fetch(`${API}/outbox`);
+  return r.json();
+}
+
+export async function moveToVerified(filename: string) {
+  const r = await fetch(`${API}/wallet/moveToVerified`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ filename }),
+  });
+  return r.json();
+}
