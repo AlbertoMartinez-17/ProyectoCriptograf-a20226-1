@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "dist/server.js",
   "scripts": {
-    "dev": "ts-node src/server.ts",
+    "dev": "ts-node src/walletServer.ts",
     "dev:wallet": "ts-node src/walletServer.ts",
-    "start": "ts-node src/server.ts",
+    "start": "ts-node src/walletServer.ts",
     "build": "tsc",
     "test": "vitest run",
     "demo": "ts-node src/testFileManager.ts"

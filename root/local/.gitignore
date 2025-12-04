@@ -35,3 +35,6 @@ verified/*.json
 #OS
 .DS_Store
 Thumbs.db
+
+#FROM THE SIMULATION
+simulation_data/
