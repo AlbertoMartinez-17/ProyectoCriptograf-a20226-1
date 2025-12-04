@@ -1,0 +1,12 @@
+{
+  "tx": {
+    "from": "0xb280f1bb546df526a23bfa571ab2f654be49be0e",
+    "to": "hola",
+    "value": "0",
+    "nonce": "1764823539144",
+    "timestamp": "2025-12-04T04:45:39.144Z"
+  },
+  "sig_scheme": "Ed25519",
+  "signature_b64": "EVaCmUGgqcWgnkvw+FZ6ieiDYZg8z7uFIPItct9mrhaEeYKzQ69kmM/WG+5RZHhrQCQ3ST6a6vDj2/rgyc6IAg==",
+  "pubkey_b64": "bgXMdPmvidmrxK/Xlg0FQoHgpgeomuMmQ1A5bBY3gKs="
+}

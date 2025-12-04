@@ -53,3 +53,12 @@ export async function verifyTx(filename: string) {
   });
   return r.json();
 }
+
+export async function readAddress(path: string) {
+  const r = await fetch(`${API}/wallet/readAddress`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ path }),
+  });
+  return r.json();
+}

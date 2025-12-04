@@ -1,0 +1,12 @@
+{
+  "tx": {
+    "from": "0x515dfa5e62c3ed3eb353245591549a592f293b32",
+    "to": "hola como estas 236",
+    "value": "0",
+    "nonce": "1764821556110",
+    "timestamp": "2025-12-04T04:12:36.110Z"
+  },
+  "sig_scheme": "Ed25519",
+  "signature_b64": "m7+zHbVhLZMvVcFeSpYzBw5VgyDSkpTk1CXKoMWmBCDtFXYju4I+Qq21w9wBbJzSFOZqHo0JPLyNW1cN91eiDQ==",
+  "pubkey_b64": "j432DLloAvLlH8xcf2wvS5LJfhGXucbcnql8YSJfQqk="
+}

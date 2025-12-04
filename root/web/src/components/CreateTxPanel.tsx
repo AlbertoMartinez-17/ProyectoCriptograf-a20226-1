@@ -5,29 +5,29 @@ export default function CreateTxPanel() {
   const [toAddress, setToAddress] = useState("");
   const [amount, setAmount] = useState("0");
   const [passphrase, setPassphrase] = useState("");
-  const [receiverPath, setReceiverPath] = useState("./simulation_data/Name/inbox"); // Path of the other wallet to create the network simualtion
+  const [receiverPath, setReceiverPath] = useState("./data/Name/inbox"); // Path of the other wallet to create the network simualtion
 
   async function handleSend() {
-    if (!toAddress || !amount || !passphrase) return alert("Faltan datos");
+    if (!toAddress || !amount || !passphrase) return alert("Missing data");
 
     try {
       const res = await sendTx(toAddress, Number(amount), passphrase, receiverPath);
       
       if (res.ok) {
-        alert(`Transaction SNed!\nArchivo: ${res.filename}`);
+        alert(`Transaction Send!\nFile: ${res.filename}`);
         setAmount("0");
         setPassphrase(""); //Zeroize password? after use it
       } else {
         alert("❌ Error: " + res.error);
       }
     } catch (e) {
-      alert("Error enviando transacción");
+      alert("Error sending transaction");
     }
   }
 
   return (
     <div className="panel">
-      <h2>💸 Enviar Transacción</h2>
+      <h2>Create Transaction</h2>
       
       <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
         <input 

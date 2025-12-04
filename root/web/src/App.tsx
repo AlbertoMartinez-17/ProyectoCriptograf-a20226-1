@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Cold Crypto Wallet</h1>
+      <h1>Cold Wallet</h1>
 
       <div className="grid">
         <KeysPanel />
