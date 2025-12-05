@@ -51,6 +51,11 @@ Incluye:
 - Registro de eventos
 
 ## Instalación y Ejecución
+
+Primero se ingresa a la carpeta root
+
+`cd root`
+
 ### Backend
 
 `cd local`
