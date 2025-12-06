@@ -52,11 +52,25 @@ Incluye:
 
 ## Instalación y Ejecución
 
+### Opción 1
+Esta opción solo puede usarse en linux y macOS, primero se abre una terminal situada en el directorio base de proyecto
+
+Después se dan permisos de ejecución al script de bash que automatiza y reduce a un comando la ejecución (esto solo se realiza la primera vez), se hace con el comando:
+
+`chmod +x start_project.sh`
+
+Para ejecutar únicamente se utiliza el siguiente comando:
+
+`./start_project.sh`
+
+
+### Opción 2
+
 Primero se ingresa a la carpeta root
 
 `cd root`
 
-### Backend
+### Cold Wallet
 
 `cd local`
 
@@ -67,7 +81,7 @@ Primero se ingresa a la carpeta root
 Servidor en:
 http://localhost:3000
 
-### Frontend
+### GUI
 
 `cd web`
 
