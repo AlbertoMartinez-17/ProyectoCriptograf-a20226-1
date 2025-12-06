@@ -3,7 +3,7 @@ import { createWallet, loadWallet } from "../api";
 
 export default function Login({ onLogin }: { onLogin: () => void }) {
   const [passphrase, setPassphrase] = useState("");
-  const [directory, setDirectory] = useState("./simulation_data/Alice"); 
+  const [directory, setDirectory] = useState("./data/Alice"); 
   const [isLoading, setIsLoading] = useState(false);
 
   async function handleAction(action: "create" | "load") {
